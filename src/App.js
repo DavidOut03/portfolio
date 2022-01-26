@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes} from "react-router-dom";
+import {useEffect} from 'react';
+
+
+// Pages
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Project from "./pages/Project";
+
+//Default components
+import Navigation from "./components/navigation";
+import Footer from "./components/footer";
+
+//Import css and javascript
+import './css/App.css';
+import {setUpAnimations} from './js/animations';
+
 
 function App() {
+  useEffect(() => {
+    setUpAnimations();
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="">
+      <Navigation />
+       <Routes>
+         <Route path="/" element={<Home/>} />
+         <Route path="/projects" excact element={<Projects/>}/>
+         {/* <Route path="/contact" excact element={<Contact/>}/>
+          <Route path="/projects/:projectID" element={<Project/>}/> */}
+        </Routes>
+       <Footer />
+</div>
   );
 }
+
+
+
 
 export default App;

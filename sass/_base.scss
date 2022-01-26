@@ -1,0 +1,24 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.wave-1 {
+    outline: none;
+    stroke: transparent;
+    stroke-width: 0px;
+}
+
+img {
+    user-select: none;
+}
