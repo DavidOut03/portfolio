@@ -9,24 +9,24 @@ function Footer() {
         </ul>
 
         <div className="footer__logo-box">
-            <a href="/"> <img src="./images/Logo.svg" alt="Logo" className="footer__logo" /> </a>
+            <a href="/"> <img src="../images/Logo.svg" alt="Logo" className="footer__logo" /> </a>
         </div>
 
         <ul className="footer__list">
             <li className="footer__list__item">
-                <a href="https://www.linkedin.com/in/david-out-924706221/">
+                <a href="https://www.linkedin.com/in/david-out-924706221/" target="_blank"  rel="noreferrer">
                     <i className="fab fa-linkedin-in"></i>
                 </a>
             </li>
 
             <li className="footer__list__item">
-                <a href="https://github.com/DavidOut03">
+                <a href="https://github.com/DavidOut03" target="_blank"  rel="noreferrer">
                     <i className="fab fa-github"></i>
                 </a>
             </li>
 
             <li className="footer__list__item">
-                <a href="https://codepen.io/davidout">
+                <a href="https://codepen.io/davidout" target="_blank"  rel="noreferrer">
                     <i className="fab fa-codepen"></i>
                 </a>
             </li>

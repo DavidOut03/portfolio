@@ -12,7 +12,7 @@ const Home = () => {
             </div>
 
             <div className="hero-section__button-box moveIn bottom">
-                <a href="" className="btn btn-1">resume</a>
+                <a href="#" className="btn btn-1">resume</a>
                 <a href="/contact" className="btn btn-2">contact</a>
             </div>
         </div>
@@ -21,7 +21,7 @@ const Home = () => {
     <section id="about-section" className="about-section">
         <h1 className="section-title moveIn bottom">About me</h1>
         <div className="about-section__content">
-            <img src="../images/image 1.png" alt="about me image" className="about-section__image moveIn left" />
+            <img src="../images/image1.png" alt="about me" className="about-section__image moveIn left" />
 
 
             {/* Ik ben een student met een passie voor design en programmeren die beschikbaar voor freelance werk.
@@ -80,13 +80,13 @@ const Home = () => {
     </section>
 
          <section className="cta-section">
-        <h2 className="section-title moveIn bottom">Are you intrested in working with me?</h2>
+        <h2 className="section-title moveIn bottom">Are you interested in working with me?</h2>
         <div className="cta-section__content">
-             <img src="./images/image 2.png" alt="about me" className="about-section__image moveIn left" />
+             <img src="./images/image2.png" alt="about me" className="about-section__image moveIn left" />
 
              <div className="cta-section__buttons moveIn right">
                 <a href="/contact" className="btn btn-3">Yes, but how can i contact you?</a>
-                <a href="/projects" className="btn btn-4">Not yet, i want to see your porjects first.</a>
+                <a href="/projects" className="btn btn-4">Not yet, i want to see your projects first.</a>
              </div>
         </div>
          </section>

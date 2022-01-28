@@ -1,0 +1,29 @@
+[
+    {
+        "projectID": "portfolio",
+        "projectName": "Portfolio",
+        "adres": "https://davidout.com",
+        "github": "https://github.com/DavidOut03/Portfolio",
+        "thumbnail": "/images/Portfolio.png"
+    },
+    {
+        "projectID": "hue",
+        "projectName": "HUE",
+        "github": "https://github.com/DavidOut03/HUE",
+        "thumbnail": "/images/HUE.png"
+    },
+    {
+        "projectID": "todolist",
+        "projectName": "to Do List",
+        "adres": "https://david-out-to-do-list.herokuapp.com",
+        "github": "https://github.com/DavidOut03/toDoList",
+        "thumbnail": "/images/toDoList.png"
+    },
+    {
+        "projectID": "vankleef",
+        "projectName": "van Kleef",
+        "github": "https://github.com/DavidOut03/VanKleefOptiek",
+        "thumbnail": "/images/vanKleef.png"
+    }
+
+]

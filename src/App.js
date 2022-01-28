@@ -6,7 +6,7 @@ import {useEffect} from 'react';
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Project from "./pages/Project";
+import PageNotFound from "./pages/PageNotFound";
 
 //Default components
 import Navigation from "./components/navigation";
@@ -28,8 +28,10 @@ function App() {
        <Routes>
          <Route path="/" element={<Home/>} />
          <Route path="/projects" excact element={<Projects/>}/>
+         <Route path="/contact" excact element={<Contact/>}/> 
          {/* <Route path="/contact" excact element={<Contact/>}/>
           <Route path="/projects/:projectID" element={<Project/>}/> */}
+         <Route path="*" element={<PageNotFound/>} />
         </Routes>
        <Footer />
 </div>

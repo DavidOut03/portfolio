@@ -1,35 +1,33 @@
 import {useEffect} from 'react';
+import {useLocation} from "react-router-dom";
 
 const Navigation = () => {
+    const pathname = useLocation().pathname;
+
     useEffect(() => {
-        window.addEventListener("scroll", (event) => {
+        if(pathname === "/") {
             const nav = document.querySelector(".navigation");
-        
-            if(nav != null) {
-            if(window.scrollY > 50) {
-            nav.classList.add("fixed");
-            } else {
             nav.classList.remove("fixed");
-            }
-         }
-        });
-
-
-       const link = document.querySelector(".navigation__link");
-       link.addEventListener("click", (event) => {
-           link.forEach(currentLink => {
-               event.target.classList.remove("current-page");
-           });
-           event.target.classList.add("current-page");
-       });
-
+            
+            window.addEventListener("scroll", (event) => {
+               
+            
+                if(nav != null) {
+                if(window.scrollY > 50) {
+                nav.classList.add("fixed");
+                } else {
+                nav.classList.remove("fixed");
+                }
+             }
+            });
+        }
       });
+   
 
 
-    return  (<div className="navigation">
-
+    return  (<div className="navigation fixed">
         <div className="navigation__logo-box">
-            <a href="/"> <img src="./images/Logo.svg" alt="Logo" className="logo" /> </a>
+            <a href="/"> <img src="../images/Logo.svg" alt="Logo" className="logo" /> </a>
         </div>
     
     <ul className="navigation__list">

@@ -1,0 +1,99 @@
+.project-section {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        .project {
+            background-color: $color-white;
+            box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 3rem;   
+            margin: 5rem;
+    
+            height: 45rem;
+            @include respond(phone) {
+                height: 38rem;
+            }
+            width: 42rem;
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+       
+    
+            &__title {
+                font-family: $font-family-1;
+                font-weight: bold;
+                font-size: 2.4rem;
+                text-align: center;
+                color: $color-primary;
+                margin-bottom: 3rem;
+            }
+    
+            
+    
+            &__image {
+                overflow: hidden;
+                height: 100%;
+                width: 100%;
+            }
+    
+            &__btn {
+                margin-top: 3rem;
+                font-size: 1.8rem;
+                font-weight: bold;
+            } 
+
+            &__button-box {
+                position: relative;
+                visibility: hidden;
+
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+            }
+
+            &__live, &__github {
+                margin: 0 1rem;
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: $color-white;
+                border: 1px solid $color-white;
+                opacity: 0.6;
+                margin: 1rem;
+                padding: 0.5rem 2rem;
+            }
+
+            &:hover .project__image-box {
+               filter: blur(1px) brightness(.5);
+               transition: all .5s
+            }
+
+            &:hover .project__button-box {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(-13rem);
+                transition: all .5s;
+            }
+
+            &:after, &:visited {
+                transform: translateY(0) scale(1) !important;
+            }
+        
+            &:hover,&:active {
+                transform: translateY(-1.5rem) scale(1.03) !important;
+            }
+        }
+
+    }
+
+    
+}

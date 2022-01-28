@@ -1,8 +1,6 @@
 
 export const setUpAnimations = () => {
     const moveIn = document.querySelectorAll(".moveIn");
-    console.log(moveIn);
-
     const moveInObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             entry.target.classList.toggle("show", entry.isIntersecting);
