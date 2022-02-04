@@ -1,4 +1,4 @@
-import emailData from "../email.json";
+import objectData from "../object.json";
 import emailjs from '@emailjs/browser';
 
 import {useState} from 'react'
@@ -32,7 +32,7 @@ const Contact = () => {
     setMessage("");
 
     button.classList.add("submit-button__clicked");
-    emailjs.send(emailData.serviceID,emailData.templateID, data, emailData.userID)
+    emailjs.send(objectData.serviceID,objectData.templateID, data, objectData.userID)
 	  .then((response) => {
 	   console.log('SUCCESS!', response.status, response.text);
      setInterval(setMessageSend(true), 3000);
