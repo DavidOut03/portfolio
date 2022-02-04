@@ -1,0 +1,66 @@
+.page-not-found {
+    padding: 15rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__image {
+        @include respond(tab-land) {
+            height: 60rem;
+        }
+        @include respond(tab-port) {
+          margin-top: 10rem;
+          height: 30rem;
+        }
+        @include respond(phone) {
+          height: 15rem;
+          margin-left: 3rem;
+        }
+    }
+
+    @include respond(tab-port) {
+      
+    }
+
+    &__content {
+        font-family: $font-family-1;
+        color: $color-primary-dark;
+        font-weight: bold;
+
+        @include respond(phone) {
+            margin-left: 3rem;
+        }
+
+        h3 {
+          font-size: 10rem;
+
+          @include respond(tab-port) {
+            font-size: 8rem;
+          }
+          @include respond(phone) {
+            font-size: 4rem;
+          }
+        }
+
+        h2 {
+            font-size: 16rem;
+
+            @include respond(tab-port) {
+              font-size: 14rem;
+            }
+            @include respond(phone) {
+              font-size: 8rem;
+            }
+        }
+
+        h4 {
+            font-size: 6rem;
+            @include respond(tab-port) {
+              font-size: 4rem;
+            }
+            @include respond(phone) {
+              font-size: 2rem;
+            }
+        }
+    }
+}

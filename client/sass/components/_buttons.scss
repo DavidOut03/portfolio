@@ -1,0 +1,90 @@
+.current-page {
+    border: 3px solid $color-secondary;
+    box-sizing: border-box;
+    border-radius: 60px;
+    color: $color-secondary;
+    
+
+    padding: .5rem 2rem;
+    font-size: 1.6rem;
+    font-family: $font-family-3;
+    text-decoration: none;
+
+    transition: all .5s;
+
+    &:hover {
+        border: 3px solid $color-secondary-light;
+        color: $color-secondary-light;
+    }
+
+    @include respond(phone) {
+        font-size: 1.4rem;
+        padding: .25rem 1rem;
+    }
+}
+
+.btn {
+    text-decoration: none;
+
+    &-1 {
+        border: 3px solid $color-primary-light;
+        border-radius: 9rem;
+        color: $color-primary-light;
+      
+        background-color: transparent;
+        font-family: $font-family-3;
+        font-size: 1.6rem;
+      
+        text-decoration: none;
+        text-align: center;
+        padding: .5rem 3.5rem;
+    }
+
+    &-2 {
+        background-color: $color-primary;
+        border-radius: 9rem;
+        color: $color-white;
+    
+        font-family: $font-family-3;
+        font-size: 1.6rem;
+        font-weight: bold;
+    
+        text-decoration: none;
+        text-align: center;
+        padding: .8rem 3.8rem;
+    }
+
+    &-3 {
+        border: 3px solid $color-primary;
+        color: $color-primary;
+        padding: 1rem 1.5rem;
+    }
+
+    &-4 {
+        border: 3px solid $color-secondary;
+        color: $color-secondary;
+        padding: 1rem 1.5rem;
+    
+        text-decoration: none;
+    }
+
+    &:active, &:focus {
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
+    }
+
+    &-5 {
+            border: 3px solid $color-primary-dark;
+            border-radius: 9rem;
+            color: $color-primary-dark;
+          
+            background-color: transparent;
+            font-family: $font-family-3;
+            font-size: 1.6rem;
+          
+            text-decoration: none;
+            text-align: center;
+            padding: .5rem 3.5rem;
+    }
+}
