@@ -12,7 +12,7 @@ const Home = () => {
             </div>
 
             <div className="hero-section__button-box moveIn bottom">
-                <a href="/" className="btn btn-1">resume</a>
+                <a href='./Resume.pdf' className="btn btn-1" target='_blank' rel='noopener noreferrer'>resume</a>
                 <a href="/contact" className="btn btn-2">contact</a>
             </div>
         </div>
