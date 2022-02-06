@@ -13,7 +13,7 @@ import Navigation from "./components/navigation";
 import Footer from "./components/footer";
 
 //Import css and javascript
-import './css/App.css';
+import './css/App.comp.css';
 import {setUpAnimations} from './js/animations';
 
 
