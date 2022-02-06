@@ -20,7 +20,7 @@ const Projects = () => {
                             <a   a href={"" + project.adres} className="project__live" target="_blank"  rel="noreferrer">Live</a>
                             <a href={"" + project.github} className="project__github" target="_blank"  rel="noreferrer">Code</a>
                         </div>
-                    <a href={"/projects/" + project.projectID} className="project__btn btn-5">Read more</a>
+                    {/* <a href={"/projects/" + project.projectID} className="project__btn btn-5">Read more</a> */}
                 </div>;
             } else {
               returned = 
@@ -32,7 +32,7 @@ const Projects = () => {
                     <div className="project__button-box">
                             <a href={"" + project.github} className="project__github" target="_blank"  rel="noreferrer">Code</a>
                         </div>
-                     <a href={"/projects/" + project.projectID} className="project__btn btn-5">Read more</a>
+                     {/* <a href={"/projects/" + project.projectID} className="project__btn btn-5">Read more</a> */}
                 </div>;
             }
 

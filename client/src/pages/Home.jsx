@@ -39,7 +39,6 @@ const Home = () => {
                 after 3 years of experience with the Java language I started to get interested in web development.
                 After following the <strong>'Web development bootcamp' London App Brewery</strong> I was able to make my own projects.
                 After a little over a year of experience with web development, I started freelancing.
-                I'am a student with a passion for design and programming.
            </p>
         </div>
     </section>
