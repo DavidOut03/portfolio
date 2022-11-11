@@ -3,6 +3,7 @@
     border-top: solid 10px;
     border-color: var(--colour-primary-30);
     background-color: var(--colour-white);
+    min-width: 27rem;
 
     @include respond("phone") {
         padding: 2.5rem 3.5rem;

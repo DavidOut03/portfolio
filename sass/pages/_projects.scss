@@ -82,6 +82,7 @@
                 right: 10rem;
             }
 
+            
             @include respond("phone") {
                 right: 0rem;
                 height: 100%;

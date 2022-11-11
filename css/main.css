@@ -333,6 +333,7 @@ body, html {
   border-top: solid 10px;
   border-color: var(--colour-primary-30);
   background-color: var(--colour-white);
+  min-width: 27rem;
   z-index: 1;
   display: flex;
   align-items: center;
