@@ -851,17 +851,22 @@ body, html {
           top: 0;
           right: 0;
           width: 45%; } }
+      .projects .project__image img {
+        position: relative; }
+        @media only screen and (max-width: 56.25em) {
+          .projects .project__image img {
+            right: 10rem; } }
+        @media only screen and (max-width: 37.5em) {
+          .projects .project__image img {
+            right: 0rem;
+            height: 100%;
+            width: 100%; } }
       @media only screen and (max-width: 37.5em) {
         .projects .project__image {
           position: absolute;
           top: 0;
           width: 100%;
           height: 20rem; } }
-      .projects .project__image img {
-        position: relative; }
-        @media only screen and (max-width: 56.25em) {
-          .projects .project__image img {
-            right: 10rem; } }
     .projects .project__title {
       font-size: 3rem;
       font-weight: bold;
