@@ -1,0 +1,258 @@
+.roadmap {
+    --space-between: 10rem;
+    --margin-bottom: calc(var(--margin-extra-big) + 12rem);
+
+    margin: var(--margin-12rem) 0;
+    width: 100%;
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include respond("tab-port") {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading-2 {
+        margin-bottom: var(--margin-extra-big);
+        max-width: fit-content;
+
+        @include respond("tab-land") {
+            font-size: 5rem;
+            text-align: center;
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    
+
+    .education {
+        width: 50%;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        
+        
+        @include respond("tab-port") {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .heading-2 {
+            text-align: right;
+            margin-right: var(--space-between);
+
+            @include respond("tab-port") {
+                text-align: center !important;
+                margin-right: 0 !important;
+            }
+        }
+
+        .cards {
+            padding-top: calc( var(--margin-bottom) * 1.5);
+            padding-bottom: calc(var(--margin-bottom));
+    
+
+            @include respond("tab-port") {
+                padding-top: 0;
+            }
+
+
+            border-right: .5rem solid var(--colour-primary-65);
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+
+            padding-right: var(--space-between);
+            align-items: flex-end;
+
+            @include respond("tab-port") {
+                padding-right: 0;
+                border: none;
+                align-items: center;
+                text-align: center;
+
+            }
+    
+            
+
+            .card {
+                align-items: flex-end;
+                text-align: right;
+    
+                &::before {
+                    right: calc(-1 * var(--space-between) - 0.5rem);
+                }
+
+                @include respond("tab-port") {
+                    align-items: center;
+                    text-align: center;
+
+                    &::before {
+                        right: 0;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        @include respond("tab-port") {
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 1rem;
+                border-radius: 2rem;
+                background-color: var(--colour-primary-65);
+            }
+        }
+    }
+
+    .work-experience {
+        width: 50%;
+
+        @include respond("tab-port") {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 15rem;
+        }
+
+        .heading-2 {
+            margin-left: var(--space-between);
+
+            @include respond("tab-port") {
+                margin-left: 0;
+            }
+        }
+        
+        .cards {
+            padding-top: calc(0.5 * var(--margin-bottom));
+            padding-bottom: calc(var(--margin-bottom) * 2);
+
+            border-left: .5rem solid var(--colour-primary-65);
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            padding-left: var(--space-between);
+            align-items: flex-start;
+
+            @include respond("tab-port") {
+                border: none;
+                padding-left: 0;
+                padding-top: 0;
+                align-items: center;
+            }
+
+            .card {
+                align-items: flex-start;
+                text-align: left;
+
+                &::before {
+                left: calc(-1 * var(--space-between) - 0.5rem);
+                z-index: -1;
+                }
+           
+                @include respond("tab-port") {
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .card {
+        position: relative;
+        padding: 3rem;
+        background-color: var(--colour-primary-65);
+        border-radius: .3rem;
+        display: flex;
+        flex-direction: column;
+
+
+        width: 36rem;
+       
+
+        &__title {
+            text-align: inherit;
+            font-size: 2.4rem;
+            font-family: var(--font-family-1);
+            font-weight: bold;
+            color: var(--colour-white);
+            margin-bottom: var(--margin-extra-small);
+        }
+
+        &__description {
+            text-align: inherit;
+            font-size: 1.9rem;
+            font-family: var(--font-family-1);
+            color: var(--colour-white);
+            font-weight: 300;
+            
+            &:not(:last-child) {
+                margin-bottom: var(--margin-normal);
+            }
+
+            list-style: none;
+
+            &__text:not(:last-child) {
+                margin-bottom: .3rem;
+            }
+            
+            &__link {
+                color: inherit;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                    opacity: .9;
+                }
+            }
+        }
+
+        .btn {
+            font-size: 1.9rem;
+        }
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            height: .6rem;
+            width: calc(var(--space-between) + 0.5rem);
+            border-radius: 2rem;
+            background-color: var(--colour-primary-65);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20rem;
+        }
+
+        @include respond("tab-port") {
+            text-align: center !important;
+            align-items: center !important;
+            justify-content: center !important;
+            flex-direction: column !important;
+            right: 0 !important;
+            left: 0 !important;
+            
+            &::before {
+                display: none !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+//set all variables
+
+html {
+    --font-family-1: "Roboto", sans-serif;
+    --font-family-2: "Roboto", serif;
+
+
+    // ----------------------- colours -----------------------
+    // the number stands for the lightness of the colour in the hsl format hsl(hue,saturation,lightness)
+
+    --colour-white: #FFFFFF;
+    --colour-black: #000000;
+
+        // primary colour
+    --colour-primary-30: #242889;
+    --colour-primary: #353ACA;
+    --colour-primary-53: #4246CD;
+    --colour-primary-65: #7275DA;
+    --colour-primary-70: #8689DF;
+    --colour-primary-80: #AEB0EA;
+
+        // secondary colour
+    --colour-secondary:  #EC255A;
+    --colour-secondary-60: #EF4371;
+    --colour-secondary-80: #F7A1B7;
+
+        // tertiary colour
+    --colour-tertiary: #FDC602;
+    --colour-tertiary-65: #FED74E;
+
+    // body background
+    --background: linear-gradient(0deg, rgba(36,40,137,.95) 95%, rgba(36,40,137,.95) 100%), url("../../img/background.jpg");
+
+
+    // margins and paddings
+    --margin-extra-small: 1rem;
+    --margin-small: 1.5rem;
+    --margin-normal: 3rem;
+    --margin-big: 5rem;
+    --margin-extra-big: 8rem;
+    --margin-10rem: 10rem;
+    --margin-12rem: 12rem;
+
+
+    --margin-section: 17rem;
+    --padding-page: 12rem;
+
+    @include respond("big-desktop") {
+        --margin-section: 20rem;
+        --padding-page: 25rem;
+    }
+
+    @include respond("tab-land") {
+        --margin-section: 15rem;
+        --padding-page: 8rem;
+    }
+
+    @include respond("tab-port") {
+        --margin-section: 15rem;
+        --padding-page: 6rem;
+    }
+
+    @include respond("phone") {
+        --margin-section: 8rem;
+        --padding-page: 2rem;
+    }
+}
+
+#lightmode {
+
+}

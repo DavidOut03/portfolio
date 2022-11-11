@@ -1,0 +1,176 @@
+.contact {
+    width: 100%;
+  
+    padding: var(--margin-12rem) 0;
+    padding-bottom: 24rem;;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include respond("tab-port") {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__form {
+        width: 60%;
+
+        @include respond("tab-port") {
+            margin-bottom: var(--margin-12rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__info {
+        padding-left: var(--margin-normal);
+        padding-bottom: var(--margin-normal);
+       
+        @include respond("desktop") {
+            position: relative;
+            &::before {
+                content: "";
+                position:  absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 5px;
+                background-color: var(--colour-primary-65);
+                border-radius: 2rem;
+            }
+        }
+
+        @include respond("tab-port") {
+            padding: 0;
+            text-align: center;
+        }
+     
+
+       @include respond("big-desktop") {
+        .heading-4 {
+            font-size: 5rem;
+        }
+       }
+    }
+
+    &__socials {
+        margin-top: var(--margin-normal);
+        list-style: none;
+    }
+
+    &__social {
+       
+
+        font-size: 2rem;
+        color: var(--colour-primary-80);
+        font-family: var(--font-family-1);
+        font-weight: bold;
+
+        transition: color .3s;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include respond("big-desktop") {
+            font-size: 2.5rem;
+        }
+
+        @include respond("tab-port") {
+            text-align: center;
+            justify-content: center;
+        }
+
+        @include respond("phone") {
+            font-size: 1.8rem;
+
+            &:first-child {
+                display: none;
+            }
+        }
+
+        &__icon {
+            margin-right: 1rem;
+            position: relative;
+            top: 1rem;
+
+            height: 3rem;
+            width: 3rem;
+
+            @include respond("big-desktop") {
+                margin-right: 2rem;
+            }
+
+            @include respond("phone") {
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+
+        a {
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            color: currentColor;
+            text-align: inherit;
+            text-decoration: none;
+
+            @include respond("tab-port") {
+                text-align: center;
+            }
+        }
+
+        &:hover {
+            color: var(--colour-primary-70)
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .privacy, .privacy a {
+        font-family: var(--font-family-1);
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: var(--colour-white);
+        opacity: 0.8;
+        text-decoration: none;
+
+        transition: opacity .3s;;
+
+        &:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+.blob-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    @include respond("big-desktop") {
+        width: 40%;
+    }
+
+    @include respond("tab-land") {
+        width: 55%;
+    }
+
+    @include respond("tab-port") {
+        display: none;
+    }
+}
+
+
+
