@@ -55,8 +55,7 @@ html {
   font-size: 9.2rem;
   line-height: 97%;
   font-family: var(--font-family-1);
-  font-weight: bold;
-  user-select: none; }
+  font-weight: bold; }
   @media only screen and (min-width: 121em) {
     .heading-1 {
       font-size: 12rem; } }
@@ -152,21 +151,15 @@ body {
 body, html {
   overflow-x: hidden; }
 
-.logo {
-  user-select: none; }
-  .logo .logo-text {
-    font-family: var(--font-family-1);
-    font-size: 4.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--color-white);
-    user-select: none; }
-    @media only screen and (max-width: 37.5em) {
-      .logo .logo-text {
-        font-size: 3rem; } }
-
-svg {
-  user-select: none; }
+.logo .logo-text {
+  font-family: var(--font-family-1);
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-white); }
+  @media only screen and (max-width: 37.5em) {
+    .logo .logo-text {
+      font-size: 3rem; } }
 
 .navigation {
   max-width: 100vw;
@@ -200,16 +193,14 @@ svg {
         width: 100vw; } }
   .navigation__item {
     display: inline-block;
-    margin: 0 1.5rem;
-    user-select: none; }
+    margin: 0 1.5rem; }
     @media only screen and (max-width: 56.25em) {
       .navigation__item:not(:first-child) {
         margin-top: 1.5rem; }
       .navigation__item:hover, .navigation__item:focus {
         background-color: var(--colour-primary-80); } }
   .navigation__link {
-    text-decoration: none;
-    user-select: none; }
+    text-decoration: none; }
     @media only screen and (max-width: 56.25em) {
       .navigation__link {
         font-size: 2.5rem; } }
@@ -219,8 +210,6 @@ svg {
     .navigation__link:hover {
       color: var(--colour-primary-80);
       cursor: pointer; }
-    .navigation__link a {
-      user-select: none; }
   .navigation__checkbox {
     display: none; }
   .navigation__button {
@@ -285,8 +274,7 @@ svg {
   border-radius: 4px;
   text-align: center;
   transition: background-color .3s ease-in-out;
-  outline: none;
-  user-select: none; }
+  outline: none; }
   @media only screen and (min-width: 121em) {
     .btn {
       font-size: 2.5rem; } }
@@ -708,9 +696,6 @@ svg {
   justify-content: space-between; }
   .about-me__text {
     width: 50%; }
-    @media only screen and (max-width: 75em) {
-      .about-me__text {
-        width: 100%; } }
     @media only screen and (max-width: 56.25em) {
       .about-me__text {
         width: 100%;
@@ -733,7 +718,7 @@ svg {
     color: var(--colour-white);
     margin-top: var(--margin-10rem);
     font-family: var(--font-family-1);
-    max-width: 100%;
+    max-width: 50%;
     font-size: 1.8rem;
     line-height: 150%;
     opacity: .85; }

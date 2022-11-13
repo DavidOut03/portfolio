@@ -21,6 +21,7 @@
     line-height: 97%;
     font-family: var(--font-family-1);
     font-weight: bold;
+    user-select: none;
 
     @include respond("big-desktop") {
         font-size: 12rem;
