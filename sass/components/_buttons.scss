@@ -16,7 +16,6 @@
     text-align: center;
     transition: background-color .3s ease-in-out;
     outline: none;
-    user-select: none;
 
 
     @include respond("big-desktop") {
@@ -25,6 +24,7 @@
 
     @include respond("tab-land") {
         font-size: 1.8rem;
+        padding: 1.4rem 1.6rem;
     }
 
     @include respond("phone") {

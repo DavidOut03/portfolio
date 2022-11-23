@@ -62,8 +62,7 @@
     }
 
     &__social {
-       
-
+    
         font-size: 2rem;
         color: var(--colour-primary-80);
         font-family: var(--font-family-1);
@@ -95,7 +94,6 @@
         &__icon {
             margin-right: 1rem;
             position: relative;
-            top: 1rem;
 
             height: 3rem;
             width: 3rem;
@@ -105,12 +103,16 @@
             }
 
             @include respond("phone") {
+             
                 height: 2rem;
                 width: 2rem;
             }
         }
 
         a {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
             font-size: inherit;
             font-family: inherit;
             font-weight: inherit;

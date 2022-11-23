@@ -37,9 +37,10 @@
     <object data="../svg/other/blob-2.svg" class="blob-2"></object>
     <section class="contact">
         <div class="contact__form">
-            <form class="form" action="#" method="post">
+   
 
                 <h4 class="form__title">Contact me</h4>
+                <p class="form__message"></p>
                <ul class="form__groups">
                 <li class="form__group">
                     <input type="text" name="name" id="name" placeholder="Full Name" class="form__input" required>
@@ -57,15 +58,15 @@
                 </li>
 
                 <li class="form__group privacy">
-                    <a href="/privacy">Privacy Policy</a>
+                    <!-- <a href="/privacy">Privacy Policy</a> -->
                 </li>
 
                 <li class="form__group">
-                    <button class="btn outlined primary-light" disabled>Comming soon</button>
+                    <button class="btn outlined primary-light" id="submit-button">Send</button>
                 </li>
 
                </ul>
-            </form>
+       
         </div>
         <div class="contact__info">
             <h4 class="heading-4">Other ways to contact me</h4>
@@ -161,14 +162,8 @@
     </div>
 
 </footer>
-<!-- <script type="text/javascript"
+<script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("YOUR_PUBLIC_KEY");
-   })();
-</script>
-
-<script src="../js/contact.js"></script> -->
+<script type="module" src="../js/contact.js"></script>
 </html>

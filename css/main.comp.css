@@ -29,7 +29,7 @@ html {
     html {
       --margin-section: 20rem;
       --padding-page: 25rem; } }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 82em) {
     html {
       --margin-section: 15rem;
       --padding-page: 8rem; } }
@@ -59,7 +59,7 @@ html {
   @media only screen and (min-width: 121em) {
     .heading-1 {
       font-size: 12rem; } }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 82em) {
     .heading-1 {
       font-size: 8rem; } }
   @media only screen and (max-width: 56.25em) {
@@ -112,11 +112,11 @@ html {
     .sub-heading {
       font-size: 2.2rem;
       max-width: 50rem; } }
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 82em) {
     .sub-heading {
       font-size: 2rem;
       max-width: 45rem; } }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 82em) {
     .sub-heading {
       font-size: 1.8rem; } }
   @media only screen and (max-width: 37.5em) {
@@ -278,9 +278,10 @@ body, html {
   @media only screen and (min-width: 121em) {
     .btn {
       font-size: 2.5rem; } }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 82em) {
     .btn {
-      font-size: 1.8rem; } }
+      font-size: 1.8rem;
+      padding: 1.4rem 1.6rem; } }
   @media only screen and (max-width: 37.5em) {
     .btn {
       padding: 1.2rem 4rem; } }
@@ -333,16 +334,16 @@ body, html {
   border-top: solid 10px;
   border-color: var(--colour-primary-30);
   background-color: var(--colour-white);
-  min-width: 27rem;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-self: flex-start;
+  align-self: flex-start; }
   @media only screen and (max-width: 37.5em) {
     .what-i-do .card {
-      padding: 2.5rem 3.5rem;
-      margin-top: 2rem; } }
+      padding: 2.5rem 3.5rem; } }
   .what-i-do .card.secondary {
     border-color: var(--colour-secondary);
     justify-self: center; }
@@ -474,18 +475,25 @@ body, html {
   font-size: 4rem;
   font-weight: bold;
   font-family: var(--font-family-1);
-  margin-bottom: var(--margin-big);
+  margin-bottom: var(--margin-small);
   color: var(--colour-white); }
   @media only screen and (min-width: 121em) {
     .form__title {
       font-size: 6rem; } }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 82em) {
     .form__title {
       font-size: 4rem; } }
   @media only screen and (max-width: 37.5em) {
     .form__title {
       font-size: 3rem;
       text-align: center; } }
+
+.form__message {
+  margin-bottom: var(--margin-normal);
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: var(--font-family-1);
+  color: var(--colour-primary-80); }
 
 .form__groups {
   list-style: none; }
@@ -496,7 +504,7 @@ body, html {
     margin-bottom: var(--margin-big); }
 
 .form__label {
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--colour-white);
   font-family: var(--font-family-1);
@@ -525,7 +533,7 @@ body, html {
   @media only screen and (min-width: 121em) {
     .form__input {
       font-size: 2.2rem; } }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 82em) {
     .form__input {
       font-size: 1.8rem; } }
   @media only screen and (max-width: 37.5em) {
@@ -537,6 +545,7 @@ body, html {
     border-color: var(--colour-primary-80); }
   .form__input::-webkit-input-placeholder {
     font-family: inherit;
+    font-size: inherit;
     color: currentColor; }
 
 .form__input:placeholder-shown + .form__label {
@@ -561,6 +570,10 @@ body, html {
     display: flex;
     flex-direction: row;
     width: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .hero-section__buttons {
+        align-items: center;
+        justify-content: center; } }
     .hero-section__buttons .btn:first-child {
       margin-right: var(--margin-big); }
       @media only screen and (max-width: 37.5em) {
@@ -581,16 +594,20 @@ body, html {
         align-items: center;
         justify-content: center;
         flex-direction: column; } }
-  @media only screen and (max-width: 75em) {
-    .hero-section__image {
-      position: relative; } }
-  @media only screen and (max-width: 56.25em) {
-    .hero-section__image {
-      display: none; } }
-  @media only screen and (max-width: 75em) {
-    .hero-section__image .hero-image {
-      height: 90%;
-      width: 90%; } }
+  .hero-section__image {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end; }
+    @media only screen and (max-width: 82em) {
+      .hero-section__image {
+        position: relative; } }
+    @media only screen and (max-width: 56.25em) {
+      .hero-section__image {
+        display: none; } }
+    @media only screen and (max-width: 82em) {
+      .hero-section__image .hero-image {
+        height: 90%;
+        width: 90%; } }
   .hero-section .sub-heading {
     margin-top: var(--margin-normal); }
     .hero-section .sub-heading .name, .hero-section .sub-heading .ux, .hero-section .sub-heading .web {
@@ -623,7 +640,7 @@ body, html {
     @media only screen and (min-width: 121em) {
       .hero-section .blob {
         min-width: 120rem; } }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 82em) {
       .hero-section .blob {
         min-width: 90rem; } }
     @media only screen and (max-width: 56.25em) {
@@ -647,7 +664,7 @@ body, html {
     @media only screen and (min-width: 121em) {
       .hero-section__bg-text {
         font-size: 30rem; } }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 82em) {
       .hero-section__bg-text {
         font-size: 22rem; } }
     .hero-section__bg-text:first-child {
@@ -694,31 +711,33 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  .about-me__text {
-    width: 50%; }
-    @media only screen and (max-width: 56.25em) {
-      .about-me__text {
-        width: 100%;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column; } }
   @media only screen and (max-width: 56.25em) {
-    .about-me__image {
-      display: none; } }
-  .about-me__image svg {
-    width: 100%;
-    height: 100%; }
-    @media only screen and (min-width: 121em) {
-      .about-me__image svg {
-        height: 150%;
-        width: 150%; } }
+    .about-me__text {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; } }
+  .about-me__image {
+    width: 50%;
+    display: flex; }
+    @media only screen and (max-width: 56.25em) {
+      .about-me__image {
+        display: none; } }
+    .about-me__image object, .about-me__image svg {
+      width: 70rem; }
+      @media only screen and (min-width: 121em) {
+        .about-me__image object, .about-me__image svg {
+          width: 80rem; } }
+      @media only screen and (max-width: 82em) {
+        .about-me__image object, .about-me__image svg {
+          width: 60rem; } }
   .about-me__story {
     color: var(--colour-white);
     margin-top: var(--margin-10rem);
     font-family: var(--font-family-1);
-    max-width: 50%;
+    max-width: 75%;
     font-size: 1.8rem;
     line-height: 150%;
     opacity: .85; }
@@ -726,7 +745,7 @@ body, html {
       .about-me__story {
         font-size: 2.2rem;
         max-width: 55%; } }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 82em) {
       .about-me__story {
         max-width: 80%; } }
     @media only screen and (max-width: 37.5em) {
@@ -735,6 +754,10 @@ body, html {
         margin-top: var(--margin-extra-big); } }
 
 .what-i-do {
+  background-image: url("../../img/svg/Group 69.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: var(--colour-primary-53);
   width: 100vw;
   position: relative;
@@ -815,7 +838,7 @@ body, html {
     padding: var(--margin-normal);
     padding-left: var(--margin-normal);
     width: 100%; }
-    @media only screen and (min-width: 75em) {
+    @media only screen and (min-width: 82em) {
       .projects .project {
         max-width: 120rem; } }
     @media only screen and (max-width: 56.25em) {
@@ -838,35 +861,33 @@ body, html {
           width: 100%;
           margin-top: 20rem; } }
     .projects .project__image {
+      height: 100%;
       width: 50%;
-      overflow: hidden; }
-      @media only screen and (min-width: 75em) {
-        .projects .project__image {
-          position: absolute;
-          top: 0;
-          right: 0; } }
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0; }
       @media only screen and (max-width: 56.25em) {
         .projects .project__image {
-          position: absolute;
-          top: 0;
-          right: 0;
           width: 45%; } }
-      .projects .project__image img {
-        position: relative; }
-        @media only screen and (max-width: 56.25em) {
-          .projects .project__image img {
-            right: 10rem; } }
-        @media only screen and (max-width: 37.5em) {
-          .projects .project__image img {
-            right: 0rem;
-            height: 100%;
-            width: 100%; } }
       @media only screen and (max-width: 37.5em) {
         .projects .project__image {
-          position: absolute;
-          top: 0;
           width: 100%;
           height: 20rem; } }
+      .projects .project__image img {
+        position: relative;
+        left: 0; }
+        @media only screen and (max-width: 82em) {
+          .projects .project__image img {
+            right: 5rem; } }
+        @media only screen and (max-width: 56.25em) {
+          .projects .project__image img {
+            right: 10rem;
+            width: min-content; } }
+        @media only screen and (max-width: 37.5em) {
+          .projects .project__image img {
+            height: 30rem;
+            right: 0; } }
     .projects .project__title {
       font-size: 3rem;
       font-weight: bold;
@@ -932,7 +953,7 @@ body, html {
   .roadmap .heading-2 {
     margin-bottom: var(--margin-extra-big);
     max-width: fit-content; }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 82em) {
       .roadmap .heading-2 {
         font-size: 5rem;
         text-align: center;
@@ -1114,7 +1135,7 @@ body, html {
   .contact__info {
     padding-left: var(--margin-normal);
     padding-bottom: var(--margin-normal); }
-    @media only screen and (min-width: 75em) {
+    @media only screen and (min-width: 82em) {
       .contact__info {
         position: relative; }
         .contact__info::before {
@@ -1160,7 +1181,6 @@ body, html {
     .contact__social__icon {
       margin-right: 1rem;
       position: relative;
-      top: 1rem;
       height: 3rem;
       width: 3rem; }
       @media only screen and (min-width: 121em) {
@@ -1171,6 +1191,9 @@ body, html {
           height: 2rem;
           width: 2rem; } }
     .contact__social a {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
       font-size: inherit;
       font-family: inherit;
       font-weight: inherit;
@@ -1205,7 +1228,7 @@ body, html {
   @media only screen and (min-width: 121em) {
     .blob-2 {
       width: 40%; } }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 82em) {
     .blob-2 {
       width: 55%; } }
   @media only screen and (max-width: 56.25em) {

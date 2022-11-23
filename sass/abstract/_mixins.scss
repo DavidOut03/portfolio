@@ -6,10 +6,10 @@
         @media only screen and (max-width: 56.25em) {@content}    //900px 
     }                   
     @if $breakpoint == tab-land { 
-        @media only screen and (max-width: 75em) {@content}    //1200px
+        @media only screen and (max-width: 82em) {@content}    //1200px
     }                 
     @if $breakpoint == desktop { 
-        @media only screen and (min-width: 75em) {@content} //1200px
+        @media only screen and (min-width: 82em) {@content} //1200px
     }
     @if $breakpoint == big-desktop { 
         @media only screen and (min-width: 121em) {@content} //min px 1920

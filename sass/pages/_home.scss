@@ -12,6 +12,11 @@
         flex-direction: row;
         width: 100%;
 
+        @include respond("tab-port") {
+            align-items: center;
+            justify-content: center;
+        }
+
         .btn:first-child {
             margin-right: var(--margin-big);
             
@@ -46,6 +51,9 @@
     }
 
     &__image {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
         @include respond("tab-land") {
             position: relative;
         }
@@ -54,7 +62,10 @@
         }
 
         .hero-image {
+          
+
             @include respond("tab-land") {
+
                 height: 90%;
                 width: 90%;
             }
@@ -217,12 +228,6 @@
     justify-content: space-between;
 
     &__text {
-        width: 50%;
-
-        @include respond("tab-land") {
-            width: 100%;
-        }
-
         @include respond("tab-port") {
             width: 100%;
             text-align: center;
@@ -234,17 +239,22 @@
     }
 
     &__image {
+        width: 50%;
         @include respond("tab-port") {
             display: none;
         }
 
-        svg {
-            width: 100%;
-            height: 100%;
+        display: flex;;
 
+        object, svg {
+            width: 70rem;
             @include respond("big-desktop") {
-                height: 150%;
-                width: 150%;
+                width: 80rem;
+        
+            }
+
+            @include respond("tab-land") {
+                width: 60rem;
             }
         }
     }
@@ -253,7 +263,9 @@
         color: var(--colour-white);
         margin-top: var(--margin-10rem);
         font-family: var(--font-family-1);
-        max-width: 100%;
+        max-width: 75%;
+
+      
 
         font-size: 1.8rem;
         line-height: 150%;
@@ -279,6 +291,11 @@
 }
 
 .what-i-do {
+    background-image: url("../../img/svg/Group\ 69.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
     background-color: var(--colour-primary-53);
     width: 100vw;
     position: relative;

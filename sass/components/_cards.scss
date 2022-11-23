@@ -3,11 +3,9 @@
     border-top: solid 10px;
     border-color: var(--colour-primary-30);
     background-color: var(--colour-white);
-    min-width: 27rem;
 
     @include respond("phone") {
         padding: 2.5rem 3.5rem;
-        margin-top: 2rem;
     }
 
     z-index: 1;
@@ -16,6 +14,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
+    justify-self: flex-start;
+    align-self: flex-start;
 
     &.secondary {
         border-color: var(--colour-secondary);

@@ -43,16 +43,11 @@ body, html {
         font-weight: bold;
         text-decoration: none;
         color: var(--color-white);
-        user-select: none;
-
+        
         @include respond("phone") {
             font-size: 3rem;
         }
     }
 
-    user-select: none;
-}
 
-svg {
-    user-select: none;
 }

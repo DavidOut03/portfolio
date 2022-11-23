@@ -1,10 +1,30 @@
-const data = "../js/data.json";
+import data from '../js/data.json' assert {type: 'json'};
+emailjs.init(data.publicKey);
 
-emailjs.send(data.serviceID,objectData.templateID, data, objectData.userID)
-.then((response) => {
- console.log('SUCCESS!', response.status, response.text);
-setInterval(setMessageSend(true), 3000);
-}, (err) => {
- console.log('FAILED...', err);
-playButtonAnimation(button, false);
-});    
+const submitButton = document.getElementById("submit-button");
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
+const formMessage = document.querySelector(".form__message");
+
+
+submitButton.addEventListener("click", (e) => {
+    const paramaters = {
+        "name": name.value,
+        "email": email.value,
+        "message": message.value
+    }
+
+    name.value = "";
+    email.value = "";
+    message.value = "";
+
+    formMessage.textContent = "The message was succesfully send.";
+
+    emailjs.send(data.serviceID2, data.templateID, paramaters).then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+
+});
