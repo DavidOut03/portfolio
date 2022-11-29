@@ -291,10 +291,13 @@
 }
 
 .what-i-do {
-    background-image: url("../../img/svg/Group\ 69.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+ 
+    @include respond("desktop") {
+        background-image: url("../../img/svg/Group\ 69.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 
     background-color: var(--colour-primary-53);
     width: 100vw;

@@ -754,15 +754,17 @@ body, html {
         margin-top: var(--margin-extra-big); } }
 
 .what-i-do {
-  background-image: url("../../img/svg/Group 69.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-color: var(--colour-primary-53);
   width: 100vw;
   position: relative;
   right: var(--padding-page);
   padding: var(--margin-12rem) var(--padding-page); }
+  @media only screen and (min-width: 82em) {
+    .what-i-do {
+      background-image: url("../../img/svg/Group 69.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; } }
   @media only screen and (max-width: 37.5em) {
     .what-i-do {
       padding-top: var(--margin-extra-big); } }
