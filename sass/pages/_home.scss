@@ -194,13 +194,14 @@
 
        object {
         user-select: none;
+        pointer-events: none;
         cursor: pointer;
-        z-index: -1;
+        z-index: -10;
        }
 
 
         &__link {
-            z-index: 0;
+            z-index: 1;
             display: inline-block;
             height: 6rem;
 
