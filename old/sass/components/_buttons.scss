@@ -1,0 +1,107 @@
+.btn {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+
+    font-family: var(--font-family-1);
+    font-size: 2.2rem;
+    font-weight: bold;
+
+    background-color: var(--colour-primary-30);
+    border: none;
+
+    padding: 1.4rem 5rem;
+    border-radius: 4px;
+
+    text-align: center;
+    transition: background-color .3s ease-in-out;
+    outline: none;
+
+
+    @include respond("big-desktop") {
+        font-size: 2.5rem;
+    }
+
+    @include respond("tab-land") {
+        font-size: 1.8rem;
+        padding: 1.4rem 1.6rem;
+    }
+
+    @include respond("phone") {
+        padding: 1.2rem 4rem;
+    }
+
+    &__icon {
+        height: 18px;
+        width: 18px;
+        position: relative;
+        top: .2rem;
+
+        cursor: pointer;
+        margin-left: 1.5rem !important;
+    }
+
+
+    &:hover {
+        background-color: var(--colour-primary-65);
+       
+    }
+
+    &.primary-light { 
+        background-color: var(--colour-primary-70);
+        border-color: var(--colour-primary-70);
+
+        &.outlined {
+            color: var(--colour-primary-70);
+        }
+
+        &:hover {
+            background-color: var(--colour-primary-80);
+            border-color: var(--colour-primary-80);
+            &.outlined {
+                color: var(--colour-primary-80);
+            }
+        }
+    }
+
+    &.secondary {
+        background-color: var(--colour-secondary);
+        border-color: var(--colour-secondary);
+
+        &.outlined {
+            color: var(--colour-secondary);
+        }
+
+        &:hover {
+            background-color: var(--colour-secondary-60);
+            border-color: var(--colour-secondary-60);
+            &.outlined {
+                color: var(--colour-secondary-60);
+            }
+        }
+    }
+
+    &.tertiary {
+        background-color: var(--colour-tertiary);
+        border-color: var(--colour-tertiary);
+
+        &.outlined {
+            color: var(--colour-tertiary);
+        }
+
+        &:hover {
+            background-color: var(--colour-tertiary-65);
+            border-color: var(--colour-tertiary-65);
+            &.outlined {
+                color: var(--colour-tertiary-65);
+            }
+        }
+    }
+
+    &.outlined {
+        background-color: transparent !important;
+        box-sizing: border-box;
+        box-shadow: inset 0px 00px 0px 4px currentColor;
+    }
+
+}

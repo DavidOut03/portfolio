@@ -1,0 +1,386 @@
+.hero-section {
+    position: relative;
+    height: 70vh;
+
+    @include respond("phone") {
+        margin-top: 4rem;
+        margin-bottom: var(--margin-section);
+    }
+    
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        @include respond("tab-port") {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:first-child {
+            margin-right: var(--margin-big);
+            
+            @include respond("phone") {
+                margin-right: 0;
+                margin-bottom: var(--margin-small);
+            }
+        }
+
+        @include respond("phone") {
+            flex-direction: column;
+        }
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__text {
+        display: inline-block;
+        width: 50%;
+
+        @include respond("tab-port") {
+           width: auto;
+           text-align: center;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           
+           flex-direction: column;
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        @include respond("tab-land") {
+            position: relative;
+        }
+        @include respond("tab-port") {
+            display: none;
+        }
+
+        .hero-image {
+          
+
+            @include respond("tab-land") {
+
+                height: 90%;
+                width: 90%;
+            }
+        }
+    }
+
+    .sub-heading {
+        margin-top: var(--margin-normal);
+
+        .name , .ux, .web {
+            font-weight: bolder;
+        }
+    
+        .name {
+            color: var(--colour-tertiary) !important;
+        }
+    
+        .ux {
+            color: var(--colour-secondary) !important;
+        }
+    
+        .web {
+            color: var(--colour-primary-65) !important;
+        }
+
+    }
+    
+    .heading {
+        border-left: 5px solid var(--colour-primary-65);
+        padding-left: 2.5rem;
+        margin-bottom: var(--margin-big);
+
+        @include respond("tab-port") {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: none;
+
+            padding-left: 0;
+        }
+    }
+
+    .blob {
+        position: absolute;
+        top: -10rem;
+        right: -15rem;
+
+        min-width: 100rem;
+        max-width: 40vw;
+        z-index: -1;
+
+        @include respond("big-desktop") {
+            min-width: 120rem;
+        }
+
+        @include respond("tab-land") {
+            min-width: 90rem;
+        }
+
+        @include respond("tab-port") {
+            display: none;
+        }
+    }
+
+    &__background-text {
+        position: absolute;
+        top: 15%;
+        right: 25%;
+        transform: translateX(50%)  rotate(35deg)!important;
+
+        z-index: -1;
+
+        @include respond("phone") {
+            display: none;
+        }
+
+       
+    }
+
+    &__bg-text {
+        font-size: 25rem;
+        font-weight: bold;
+        font-family: var(--font-family-1);
+        color: #393ECB;
+        user-select: none;
+
+        @include respond("big-desktop") {
+            font-size: 30rem;
+        }
+
+        @include respond("tab-land") {
+            font-size: 22rem;
+        }
+
+        &:first-child {
+            margin-bottom: var(--margin-extra-big);
+        }
+    }
+}
+
+.how-i-learned {
+    @include respond("phone") {
+        display: none;
+    }
+
+    &__title {
+       font-size: 3.7rem;
+       font-weight: bolder;
+       font-family: var(--font-family-1);
+       color: var(--colour-primary-65);
+       margin-bottom: var(--margin-normal);
+       
+       @include respond("big-desktop") {
+        font-size: 4.2rem;
+       }
+    }
+
+    
+    .logo {
+        height: 5rem;
+
+        @include respond("tab-port") {
+            height: 4rem;
+        }
+
+       object {
+        user-select: none;
+        pointer-events: none;
+        cursor: pointer;
+        z-index: -10;
+       }
+
+
+        &__link {
+            z-index: 1;
+            display: inline-block;
+            height: 6rem;
+
+            &:hover {
+                opacity: .8;
+
+                cursor: pointer;
+            }
+
+            &:not(:last-child) {
+                margin-right: var(--margin-extra-big);
+                @include respond("tab-port") {
+                    margin-right: var(--margin-normal);
+                }
+            }
+        }
+    }
+}
+
+
+.about-me {
+    padding: var(--margin-section) 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__text {
+        @include respond("tab-port") {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        width: 50%;
+        @include respond("tab-port") {
+            display: none;
+        }
+
+        display: flex;;
+
+        object, svg {
+            width: 70rem;
+            @include respond("big-desktop") {
+                width: 80rem;
+        
+            }
+
+            @include respond("tab-land") {
+                width: 60rem;
+            }
+        }
+    }
+
+    &__story {
+        color: var(--colour-white);
+        margin-top: var(--margin-10rem);
+        font-family: var(--font-family-1);
+        max-width: 75%;
+
+      
+
+        font-size: 1.8rem;
+        line-height: 150%;
+        opacity: .85;
+   
+      
+
+
+        @include respond("big-desktop") {
+            font-size: 2.2rem;
+            max-width: 55%;
+        }
+
+        @include respond("tab-land") {
+            max-width: 80%;
+        }
+
+        @include respond("phone") {
+            font-size: 1.6rem;
+            margin-top: var(--margin-extra-big);
+        }
+    }
+}
+
+.what-i-do {
+ 
+    @include respond("desktop") {
+        background-image: url("../../img/svg/Group\ 69.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    background-color: var(--colour-primary-53);
+    width: 100vw;
+    position: relative;
+    right: var(--padding-page);
+
+    padding: var(--margin-12rem) var(--padding-page);
+
+    @include respond("phone") {
+        padding-top: var(--margin-extra-big);
+    }
+
+    @include respond("tab-port") {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+  
+
+    &__card-box {
+        margin-top: var(--margin-10rem);
+        width: 100%;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @include respond("tab-port") {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 2rem;
+        }
+
+        @include respond("phone") {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: var(--margin-big);
+        }
+        
+    }
+}
+
+.cta {
+    position: relative;
+    padding: 20rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    @include respond("phone") {
+        padding: var(--margin-10rem) 0;
+
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        @include respond("phone") {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        transform: rotate(-10deg) translate(-3rem, 4rem);
+
+        @include respond("phone") {
+            display: none;
+        }
+    }
+}
+
+

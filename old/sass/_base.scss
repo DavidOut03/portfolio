@@ -1,0 +1,53 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // 100% is 16px 62.5% is 10 px so 1rem = 10px
+    scroll-behavior: smooth;
+   
+}
+
+body {
+    position: relative;
+    color: var(--colour-white);
+    padding: 6rem var(--padding-page);
+    padding-bottom: 0;
+    background-image: var(--background);
+    background-size: cover;
+    
+
+    @include respond("phone") {
+        padding: 3rem var(--padding-page);
+        padding-bottom: 0;
+        background: var(--colour-primary);
+    }
+}
+
+.home-page {
+    background: var(--colour-primary);
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+
+
+.logo {
+    .logo-text {
+        font-family: var(--font-family-1);
+        font-size: 4.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--color-white);
+        
+        @include respond("phone") {
+            font-size: 3rem;
+        }
+    }
+
+
+}
