@@ -1,4 +1,4 @@
-import data from '../js/data.json' assert {type: 'json'};
+import data from './data.json' assert {type: 'json'};
 emailjs.init(data.publicKey);
 
 const submitButton = document.getElementById("submit-button");
